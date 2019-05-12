@@ -3,7 +3,7 @@ const limit = 20
 export default {
   async search(term, page = 0) {
     try {
-      const res = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=DkUlx2MPVS8JcGmSyLIgHWB5uBleQdKp&q=${term}&limit=20&offset=${page * 20}`)
+      const res = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=DkUlx2MPVS8JcGmSyLIgHWB5uBleQdKp&q=${term}&limit=${limit}&offset=${page * limit}`)
 
       if (res.ok) {
         const {data} = await res.json()

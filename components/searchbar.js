@@ -10,7 +10,7 @@ export default class SearchBar extends React.Component {
   updateInput(event) {
     this.setState({text: event.target.value})
   }
-  
+
   search() {
     this.props.onSearch(this.state.text.trim())
     this.setState({text: ''})
@@ -29,8 +29,7 @@ export default class SearchBar extends React.Component {
           placeholder="Search"
           value={this.state.text}
           onChange={this.updateInput}
-          onKeyPress={this.handleKeyPress}
-        />
+          onKeyPress={this.handleKeyPress} />
         <button onClick={this.search}>Search</button>
         <style jsx>
         {`
